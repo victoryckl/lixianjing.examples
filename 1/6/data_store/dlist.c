@@ -250,19 +250,21 @@ DListRet dlist_foreach(DList* thiz, DListDataVisitFunc visit, void* ctx)
 int      dlist_find(DList* thiz, DListDataCompareFunc cmp, void* ctx)
 {
 	int i = 0;
+    int idx = -1;
 	DListNode* iter = thiz->first;
 
 	while(iter != NULL)
 	{
 		if(cmp(ctx, iter->data) == 0)
 		{
+            idx = i;
 			break;
 		}
 		i++;
 		iter = iter->next;
 	}
 
-	return i;
+	return idx;
 }
 
 void dlist_destroy(DList* thiz)
