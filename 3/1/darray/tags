@@ -1,0 +1,56 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CFILES	Makefile	/^CFILES=darray.c$/;"	m
+DARRAY_H	darray.h	35;"	d
+DArray	darray.h	/^typedef struct _DArray DArray;$/;"	t	typeref:struct:_DArray
+DECLS_BEGIN	typedef.h	53;"	d
+DECLS_BEGIN	typedef.h	56;"	d
+DECLS_END	typedef.h	54;"	d
+DECLS_END	typedef.h	57;"	d
+DataCompareFunc	typedef.h	/^typedef int      (*DataCompareFunc)(void* ctx, void* data);$/;"	t
+DataDestroyFunc	typedef.h	/^typedef void     (*DataDestroyFunc)(void* ctx, void* data);$/;"	t
+DataVisitFunc	typedef.h	/^typedef Ret      (*DataVisitFunc)(void* ctx, void* data);$/;"	t
+MIN_PRE_ALLOCATE_NR	darray.c	71;"	d	file:
+RET_FAIL	typedef.h	/^	RET_FAIL$/;"	e	enum:_Ret
+RET_INVALID_PARAMS	typedef.h	/^	RET_INVALID_PARAMS,$/;"	e	enum:_Ret
+RET_OK	typedef.h	/^	RET_OK,$/;"	e	enum:_Ret
+RET_OOM	typedef.h	/^	RET_OOM,$/;"	e	enum:_Ret
+RET_STOP	typedef.h	/^	RET_STOP,$/;"	e	enum:_Ret
+Ret	typedef.h	/^}Ret;$/;"	t	typeref:enum:_Ret
+SAFE_FREE	typedef.h	67;"	d
+SortFunc	typedef.h	/^typedef Ret (*SortFunc)(void** array, size_t nr, DataCompareFunc cmp);$/;"	t
+TYPEDEF_H	typedef.h	37;"	d
+_DArray	darray.c	/^struct _DArray$/;"	s	file:
+_Ret	typedef.h	/^typedef enum _Ret$/;"	g
+alloc_size	darray.c	/^	size_t alloc_size;$/;"	m	struct:_DArray	file:
+check_and_dec_int	darray.c	/^static Ret check_and_dec_int(void* ctx, void* data)$/;"	f	file:
+darray_append	darray.c	/^Ret darray_append(DArray* thiz, void* data)$/;"	f
+darray_create	darray.c	/^DArray* darray_create(DataDestroyFunc data_destroy, void* ctx)$/;"	f
+darray_delete	darray.c	/^Ret darray_delete(DArray* thiz, size_t index)$/;"	f
+darray_destroy	darray.c	/^void darray_destroy(DArray* thiz)$/;"	f
+darray_destroy_data	darray.c	/^static void darray_destroy_data(DArray* thiz, void* data)$/;"	f	file:
+darray_expand	darray.c	/^static Ret darray_expand(DArray* thiz, size_t need)$/;"	f	file:
+darray_find	darray.c	/^int      darray_find(DArray* thiz, DataCompareFunc cmp, void* ctx)$/;"	f
+darray_foreach	darray.c	/^Ret darray_foreach(DArray* thiz, DataVisitFunc visit, void* ctx)$/;"	f
+darray_get_by_index	darray.c	/^Ret darray_get_by_index(DArray* thiz, size_t index, void** data)$/;"	f
+darray_insert	darray.c	/^Ret darray_insert(DArray* thiz, size_t index, void* data)$/;"	f
+darray_length	darray.c	/^size_t   darray_length(DArray* thiz)$/;"	f
+darray_prepend	darray.c	/^Ret darray_prepend(DArray* thiz, void* data)$/;"	f
+darray_set_by_index	darray.c	/^Ret darray_set_by_index(DArray* thiz, size_t index, void* data)$/;"	f
+darray_shrink	darray.c	/^static Ret darray_shrink(DArray* thiz)$/;"	f	file:
+data	darray.c	/^	void** data;$/;"	m	struct:_DArray	file:
+data_destroy	darray.c	/^	DataDestroyFunc data_destroy;$/;"	m	struct:_DArray	file:
+data_destroy_ctx	darray.c	/^	void* data_destroy_ctx;$/;"	m	struct:_DArray	file:
+int_cmp	darray.c	/^static int int_cmp(void* ctx, void* data)$/;"	f	file:
+main	darray.c	/^int main(int argc, char* argv[])$/;"	f
+print_int	darray.c	/^static Ret print_int(void* ctx, void* data)$/;"	f	file:
+return_if_fail	typedef.h	60;"	d
+return_val_if_fail	typedef.h	63;"	d
+single_thread_test	darray.c	/^static void single_thread_test(void)$/;"	f	file:
+size	darray.c	/^	size_t size;$/;"	m	struct:_DArray	file:
+test_int_darray	darray.c	/^static void test_int_darray(void)$/;"	f	file:
+test_invalid_params	darray.c	/^static void test_invalid_params(void)$/;"	f	file:
